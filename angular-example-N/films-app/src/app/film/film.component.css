@@ -1,0 +1,29 @@
+.scroll{
+  overflow-y:auto;
+  height: 127px;
+}
+
+.actor {
+  cursor:pointer;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.film {
+  margin: 10px 0;
+}
+
+.details {
+  width: 150px;
+  margin: 0 10px;
+}
+
+.details div {
+  margin-bottom:10px;
+}
+
+.overview {
+  margin-right:10px;
+}

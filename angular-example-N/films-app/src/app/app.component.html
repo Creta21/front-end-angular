@@ -1,0 +1,23 @@
+<h1>
+  Film Database
+</h1>
+
+<form #form="ngForm" (ngSubmit)="searchForfilm(form.value)">
+  <md-input-container>
+    <input mdInput placeholder="Film title" name="filmTitleToSearch" ngModel>
+  </md-input-container>
+  <button md-button type="submit">Search</button>
+</form>
+
+<div *ngIf="films.length > 0" class="containerX">
+  <div *ngFor="let film of films" class="container">
+    <app-film [film]="film"></app-film>
+  </div>
+</div>
+<div *ngIf="films.length === 0 && noFilmFound">
+  No film found... :(
+</div>
+<div *ngIf="filmWeLikeThisWeekResult != undefined && films.length === 0">
+  <h2>This week we like:</h2>
+  <app-film [film]="filmWeLikeThisWeekResult"></app-film>
+</div>

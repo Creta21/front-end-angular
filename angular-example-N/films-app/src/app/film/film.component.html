@@ -1,0 +1,23 @@
+<div class="film" *ngIf="credits != undefined" fxLayout="row">
+  <div >
+    <img [src]="posterImgSrc" />
+  </div>
+  <div class="details">
+    <div class="bold">{{film.original_title}}</div>
+    <div>{{film.release_date | date:'y'}}</div>
+    <div>Rating: {{film.vote_average}}</div>
+  </div>
+  <div fxFlex class="scroll overview">
+    {{film.overview}}
+  </div>
+  <div fxFlex class="scroll">
+    <div *ngIf="credits.length > 0">
+      <div *ngFor="let credit of credits" class="actor" (click)="openActorImageDialog(credit.profile_path)">
+        <span class="bold">{{ credit.name }}</span> as {{ credit.character }}
+      </div>
+    </div>
+    <div *ngIf="credits.length === 0">
+      There is not available cast information.
+    </div>
+  </div>
+</div>

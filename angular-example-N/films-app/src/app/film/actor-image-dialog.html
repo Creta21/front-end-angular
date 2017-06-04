@@ -1,0 +1,4 @@
+<div (click)="dialogRef.close()" class="close">
+<img *ngIf="imgSrc != null" [src]="imgSrc"  />
+<div *ngIf="imgSrc == null" >There no image available :(</div>
+</div>
