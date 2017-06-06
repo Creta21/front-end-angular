@@ -1,0 +1,7 @@
+<div (click)="dialogRef.close('No')" class="close">
+  <h1 md-dialog-title>Actor Image</h1>
+  <div md-dialog-content>
+    <img *ngIf="image != null" src="{{image}}" >
+    <div *ngIf="image == null" >There no image available :(</div>
+  </div>
+</div>

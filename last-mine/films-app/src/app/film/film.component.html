@@ -1,0 +1,21 @@
+<div class="film" fxLayout="row" fxLayoutAlign="space-around start">
+  <div fxFlex="25">
+      <img src="{{imageUrl}}">
+  </div>
+  <div fxFlex="25">
+    <p>Original Title: <b>{{film.original_title}}</b></p>
+    <p>Released date: <b>{{film.release_date}}</b></p>
+    <p>Average: <b>{{film.vote_average}}</b></p>
+  </div>
+  <div class="overview" fxFlex="25">
+    <p>{{film.overview}}</p>
+  </div>
+  <div class="actors" fxFlex="25">
+    <div *ngFor="let act of cast">
+      <button (click)="actor(act.cast_id)">
+        {{act.name}}
+        {{act.character}}
+      </button>
+    </div>
+  </div>
+</div>

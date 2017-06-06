@@ -1,0 +1,17 @@
+.film{
+  border: 1px solid gainsboro;
+  height: 140px;
+}
+.actors{
+  margin-left: 25px;
+  width: 200px;
+  height: 138px;
+  overflow-y: scroll;
+}
+.overview{
+   height: 138px;
+   overflow-y: scroll;
+}
+button{
+  cursor: pointer;
+}

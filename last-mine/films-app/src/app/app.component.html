@@ -1,0 +1,17 @@
+<form [formGroup]="searchForm">
+  <md-input-container>
+    <input mdInput type="text" placeholder="Film name" formControlName="search">
+    <md-error class="error" *ngIf="searchForm.get('search').touched && (searchForm.get('search').hasError('required'))">
+      Is required to write something.
+    </md-error>
+  </md-input-container>
+  <button md-raised-button (click)="search()" color="warn">Search</button>
+</form>
+<div *ngIf="films.length > 0">
+  <div *ngFor="let filmObject of films">
+    <app-film [film]="filmObject"></app-film>
+  </div>
+</div>
+<div *ngIf="films.length === 0">
+  <h3>No Available Movies... :(</h3>
+</div>
