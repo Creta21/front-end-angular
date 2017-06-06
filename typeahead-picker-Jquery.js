@@ -1,6 +1,3 @@
-/*
-   Copyright John Manatakis. All rights reserved.
-*/
 $( window ).on( "load", function() {
     $(".center").css('display', 'none');
     $("#allForm").css('display', 'block');
